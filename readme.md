@@ -21,26 +21,36 @@ Same as find(String)
 $("h1 div") будет искать первое совпадение `<h1>` с дочерними или поддочерними `<div>`.
 $("h1").$("div") будет искать первый `<h1>`, затем  в нем  первый элемент `<div>`.
 Результаты поиска могут отличаться Пример:
-<body>
-<h1 id="h-1">
-    <a />
-</h1>
-<h1  id="h-2">
-    <div id="div-1">
-    <a/>
-    </div>
-    <h1  id="h-3">
-    <a/>
-    </h1>
-</h1>
-</body>
 
-$("h1 div") => <div id="div-1">
-$("h1").$("div")=> null
+`<body>`
 
+`<h1 id="h-1">`
 
+`<a />`
 
+`</h1>`
 
+`<h1  id="h-2">`
+
+`<div id="div-1">`
+
+`<a/>`
+
+`</div>`
+
+`<h1  id="h-3">`
+
+`<a/>`
+
+`</h1>`
+
+`</h1>`
+
+`</body>`
+
+`$("h1 div") => <div id="div-1">`
+
+`$("h1").$("div")=> null`
 
 2. Разработайте следующий автотест:
 
@@ -94,6 +104,22 @@ ___
 ###3. Selenide
    
 ###4. Git
+   1. Unstage
+
+   `git reset HEAD <name file>`
+
+   2. Change last commit
+
+    `git commit --amend`
+
+   3. Show differences
+
+        1. Change the differences unindexed and indexed
+
+          `git diff`
+        2. Change the differences the last commit and indexed 
+      
+          `git diff --staged`
 ###5. Resources
    1. https://en.wikipedia.org/wiki/Java_version_history
    2. [Video about snippets](https://youtu.be/xxS8rfraDXs?t=9613 "Alexey Vinogradov time 02:40:13")
