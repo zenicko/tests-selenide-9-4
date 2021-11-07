@@ -5,6 +5,42 @@ ___
 
 1. Есть ли разница между $("h1 div"); и $("h1").$("div"); 
    - может ли привести к тому что, поиск найдёт разные элементы? Если может - приведите пример, когда.
+     static SelenideElement 	
+   
+   $(java.lang.String cssSelector)
+
+     Locates the first element matching given CSS selector (lazy evaluation)
+   find(String) - Method in class com.codeborne.selenide.SelenideDriver
+   
+find(String) - Method in interface com.codeborne.selenide.SelenideElement
+   Locates the first matching element inside given element
+
+$(java.lang.String cssSelector)
+Same as find(String)
+
+$("h1 div") будет искать первое совпадение `<h1>` с дочерними или поддочерними `<a>`.
+$("h1").$("div") будет искать первый `<h1>`, затем  в нем  первый элемент `<a>`.
+Результаты поиска могут отличаться Пример:
+<body>
+<h1 id="h-1">
+    <a />
+</h1>
+<h1  id="h-2">
+    <div id="div-1">
+    <a/>
+    </div>
+    <h1  id="h-3">
+    <a/>
+    </h1>
+</h1>
+</body>
+
+$("h1 div") => <div id="div-1">
+$("h1").$("div")=> null
+
+
+
+
 
 2. Разработайте следующий автотест:
 
